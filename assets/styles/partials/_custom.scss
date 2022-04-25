@@ -1,0 +1,74 @@
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*h1 {
+    font-family: 'Shrikhand', cursive;
+}*/
+ 
+.header {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.recherche {
+    background-color: $background-primary-color;
+    height: 250px;
+    &>h1 {
+        /*font-family: 'Roboto', sans-serif;*/
+        font-size: 24px;
+    }
+    &-location {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: $background-tertiary-color;
+        height: 40px;
+        box-shadow: inset 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.fonctionnement {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    &-button {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 20px;
+        gap: 5px;
+    }
+    &-number {
+        position: absolute;
+        left: -10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        color: $text-secondary-color;
+    }
+}
+
+.restaurants {
+    padding: 10px;
+    background-color: $background-primary-color;
+}
+
+.footer {
+    background-color: $background-secondary-color;
+    color: $text-secondary-color;
+    &-nav ul {
+        list-style-type: none;
+    }
+}
