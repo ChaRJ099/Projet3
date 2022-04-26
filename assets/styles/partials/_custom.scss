@@ -4,27 +4,49 @@
     font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 24px;
+}
+
 h2 {
     margin: 0;
 }
  
 .header {
     display: flex;
-    padding: 20px;
-    align-items: center;
     justify-content: center;
-    &-logo {
-        height: 27px;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+
+        &-index {
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+
+        &-logo {
+            height: 27px;
+        }
+    }
+    i {
+        position: absolute;
+        top: 25px;
+        left: 20px;
     }
 }
 
 .recherche {
     background-color: $background-primary-color;
     height: 250px;
-    &>h1 {
-        /*font-family: 'Roboto', sans-serif;*/
+
+    &-title {
+        font-family: 'Roboto', sans-serif;
         font-size: 24px;
+        font-weight: 600;
     }
+
     &-location {
         display: flex;
         flex-direction: row;
@@ -52,12 +74,19 @@ h2 {
         }
         button {
             color: $text-secondary-color;
-            background-color: $primary-color;
+            background: linear-gradient($secondary-color, $primary-color);
+            box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.25);
             height: 45px;
             border: 0;
-            border-radius: 20px;
+            border-radius: 25px;
             padding: 15px;
+            font-weight: 500;
             cursor: pointer;
+            transition: all 350ms ease-out;
+            &:hover {
+                box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.4);
+                transition: all 350ms ease-in;
+            }
         }
     }
 }
@@ -90,9 +119,13 @@ h2 {
         font-weight: 500;
         font-size: 15px;
         cursor: pointer;
+        transition: all 350ms ease-out;
+
 
         &:hover {
             background-color: $primary-color-light;
+            box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.25);
+            transition: all 350ms ease-in;
 
             i {
                 color: $primary-color;
@@ -112,7 +145,9 @@ h2 {
         justify-content: center;
         align-items: center;
         height: 20px;
-        width: 20px;
+        width: 21px;
+        padding-top: 1px;
+        font-size: 14px;
         border-radius: 50%;
         background-color: $primary-color;
         color: $text-secondary-color;
@@ -126,6 +161,11 @@ h2 {
     padding: 30px 20px;
     background-color: $background-primary-color;
     gap: 20px;
+
+    a {
+        text-decoration: none;
+        color: $text-primary-color;
+    }
 }
 
 .card {
@@ -134,6 +174,13 @@ h2 {
     height: 250px;
     background-color: $text-secondary-color;
     box-shadow: 4px 8px 10px 1px rgba(0, 0, 0, 0.1);
+    transition: all 350ms ease-out;
+
+    &:hover {
+        box-shadow: 4px 8px 10px 1px rgba(0, 0, 0, 0.2);
+        transition: all 350ms ease-in;
+        width: 101%;
+    }
 
     &-new {
         position: absolute;
@@ -184,6 +231,16 @@ h2 {
     background-color: $background-secondary-color;
     color: $text-secondary-color;
     padding: 20px;
+    a {
+        text-decoration: none;
+        color: $text-secondary-color;
+        &:hover {
+            text-decoration: underline;
+        &-resto {
+            position: bottom;
+        }
+        }
+    }
     &-nav ul {
         list-style-type: none;
         padding-left: 0;
@@ -200,4 +257,78 @@ h2 {
         font-weight: 100;
         font-size: 18px;
     }
+}
+
+/*********************/
+/** Générique resto **/
+/*********************/
+.carte {
+    background-color: $background-primary-color;
+    height: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    &-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 30px;
+        padding: 10px;
+    }
+
+    &-content {
+        padding: 15px;
+        &-bloc-list {
+            margin-bottom: 25px;
+        }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.list-elem {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+}
+
+.commander {
+    color: $text-secondary-color;
+    background: linear-gradient($secondary-color, $primary-color);
+    box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.25);
+    height: 45px;
+    border: 0;
+    border-radius: 25px;
+    padding: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 350ms ease-out;
+
+        &:hover {
+        box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.4);
+        transition: all 350ms ease-in;
+        }
+    }
+
+/*********************/
+/** Palette du gout **/
+/*********************/
+
+.main-resto {
+    background-image: url('/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+    min-height: 600px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 50vw;
 }
