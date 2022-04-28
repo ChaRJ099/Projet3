@@ -12,44 +12,44 @@
     </head>
     <body>
         <header class="header-index">
-            <img src="assets/images/logo/ohmyfood@2x.svg" alt="Logo" class="header-index-logo">
+            <img src="assets/images/logo/ohmyfood@2x.svg" alt="Logo" class="logo">
         </header>
         <main>
-            <section class="recherche">
-                <div class="recherche-location">
+            <section class="research">
+                <div class="research-location">
                     <div>
-                        <i class="fa-solid fa-location-dot"></i>
+                        <i class="fa-solid fa-location-dot research-location__icon"></i>
                     </div>
-                    <span>Paris, Belleville</span> 
+                    <span class="research-location__text">Paris, Belleville</span> 
                 </div>
-                <div class="recherche-reservation">
-                    <h1 class="recherche-title">Réservez le menu qui vous convient</h1>
-                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                    <button type="submit">Explorez nos restaurants</button>
+                <div class="research-reservation">
+                    <h1 class="research-reservation__title">Réservez le menu qui vous convient</h1>
+                    <p class="research-reservation__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                    <button class="button" type="submit">Explorez nos restaurants</button>
                 </div>
             </section>
-            <section class="fonctionnement">
-                <h2>Fonctionnement</h2>
-                <div class="fonctionnement-box-button">
-                    <button class="fonctionnement-button" type="button">
+            <section class="functioning">
+                <h2 class="functioning__title">Fonctionnement</h2>
+                <div class="functioning-list">
+                    <button class="list-step" type="button">
                         <div class="fonctionnement-number">1</div>
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <span>Choisissez un restaurant</span>
+                        <i class="fa-solid fa-mobile-screen-button list-step__icon"></i>
+                        <span class="list-step__text">Choisissez un restaurant</span>
                     </button>
-                    <button class="fonctionnement-button" type="button">
-                        <div class="fonctionnement-number">2</div>
-                        <i class="fa-solid fa-list-ul"></i>
-                        <span>Composez votre menu</span>
+                    <button class="list-step" type="button">
+                        <div class="list-step__number">2</div>
+                        <i class="fa-solid fa-list-ul list-step__icon"></i>
+                        <span class="list-step__text">Composez votre menu</span>
                     </button>
-                    <button class="fonctionnement-button" type="button">
+                    <button class="list-step" type="button">
                         <div class="fonctionnement-number">3</div>
-                        <i class="fa-solid fa-store"></i>
-                        <span>Dégustez au restaurant</span>
+                        <i class="fa-solid fa-store list-step__icon"></i>
+                        <span class="list-step__text">Dégustez au restaurant</span>
                     </button>
                 </div>
             </section>
             <section class="restaurants">
-                <h2>Restaurants</h2>
+                <h2 class="restaurants__title">Restaurants</h2>
                 <a href="la-palette-du-gout.html">
                     <div class="card">
                         <div class="card-body">
@@ -58,10 +58,10 @@
                         </div>
                         <div class="card-footer">
                             <div class="card-footer-description">
-                                <h3>La palette du goût</h3>
-                                <span>Ménilmontant</span>
+                                <h3 class="card-footer__title">La palette du goût</h3>
+                                <span class="card-footer__text">Ménilmontant</span>
                             </div>
-                            <div class="card-footer-icon">
+                            <div class="card-footer__icon">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </div>
@@ -75,10 +75,10 @@
                         </div>
                         <div class="card-footer">
                             <div class="card-footer-description">
-                                <h3>La note enchantée</h3>
-                                <span>Charonne</span>
+                                <h3 class="card-footer__title">La note enchantée</h3>
+                                <span class="card-footer__text">Charonne</span>
                             </div>
-                            <div class="card-footer-icon">
+                            <div class="card-footer__icon">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </div>
@@ -88,14 +88,13 @@
                     <div class="card">
                         <div class="card-body">
                             <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"/>
-                            <div class="card-new">Nouveau</div>
                         </div>
                         <div class="card-footer">
                             <div class="card-footer-description">
-                                <h3>A la française</h3>
-                                <span>Cité Rouge</span>
+                                <h3 class="card-footer__title">A la française</h3>
+                                <span class="card-footer__text">Cité Rouge</span>
                             </div>
-                            <div class="card-footer-icon">
+                            <div class="card-footer__icon">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </div>
@@ -105,14 +104,13 @@
                     <div class="card">
                         <div class="card-body">
                             <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"/>
-                            <div class="card-new">Nouveau</div>
                         </div>
                         <div class="card-footer">
                             <div class="card-footer-description">
-                                <h3>Le délice des sens</h3>
-                                <span>Folie-Méricourt</span>
+                                <h3 class="card-footer__title">Le délice des sens</h3>
+                                <span class="card-footer__text">Folie-Méricourt</span>
                             </div>
-                            <div class="card-footer-icon">
+                            <div class="card-footer__icon">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </div>
@@ -121,7 +119,7 @@
             </section>
         </main>
         <footer class="footer">
-            <h2>ohmyfood</h2>
+            <h2 class="footer__title">ohmyfood</h2>
             <nav class="footer-nav">
                 <ul>
                     <li>

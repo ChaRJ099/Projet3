@@ -20,28 +20,29 @@ h2 {
     padding: 20px;
     position: relative;
 
-        &-index {
+    &-index {
         display: flex;
         padding: 20px;
         align-items: center;
         justify-content: center;
-
-        &-logo {
-            height: 27px;
-        }
     }
-    i {
+
+    &__icon {
         position: absolute;
         top: 25px;
         left: 20px;
     }
 }
 
-.recherche {
+.logo {
+    height: 27px;
+}
+
+.research {
     background-color: $background-primary-color;
     height: 250px;
 
-    &-title {
+    &__title {
         font-family: 'Roboto', sans-serif;
         font-size: 24px;
         font-weight: 600;
@@ -64,81 +65,75 @@ h2 {
         justify-content: center;
         align-items: center;
         text-align: center;
-        & h1 {
+        &__title {
             margin: 0px;
             font-size: 24px;
         }
-        p {
+        &__text {
             font-weight: 300;
             color:#5a5a5a;
-        }
-        button {
-            color: $text-secondary-color;
-            background: linear-gradient($secondary-color, $primary-color);
-            box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.25);
-            height: 45px;
-            border: 0;
-            border-radius: 25px;
-            padding: 15px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 350ms ease-out;
-            &:hover {
-                box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.4);
-                transition: all 350ms ease-in;
-            }
         }
     }
 }
 
-.fonctionnement {
+.button {
+    color: $text-secondary-color;
+    background: linear-gradient($secondary-color, $primary-color);
+    box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.25);
+    height: 45px;
+    border: 0;
+    border-radius: 25px;
+    padding: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 350ms ease-out;
+
+    &:hover {
+        box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.4);
+        transition: all 350ms ease-in;
+    }
+}
+
+.functioning {
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
-    &-box-button {
+
+    &-list {
         margin-left: 10px;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    &-button {
-        position: relative;
-        height: 65px;
-        width: 100%;
-        border-radius: 15px;
-        border: 0;
-        background-color: $background-primary-color;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        padding-left: 20px;
-        gap: 20px;
-        box-shadow: 4px 8px 10px 1px rgba(0, 0, 0, 0.1);
-        color: $text-primary-color;
-        font-weight: 500;
-        font-size: 15px;
-        cursor: pointer;
-        transition: all 350ms ease-out;
+}
 
+.list-step {
+    position: relative;
+    height: 65px;
+    width: 100%;
+    border-radius: 15px;
+    border: 0;
+    background-color: $background-primary-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    gap: 20px;
+    box-shadow: 4px 8px 10px 1px rgba(0, 0, 0, 0.1);
+    color: $text-primary-color;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 350ms ease-out;
 
-        &:hover {
-            background-color: $primary-color-light;
-            box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.25);
-            transition: all 350ms ease-in;
-
-            i {
-                color: $primary-color;
-            }
-        }
-
-        i {
-            font-size: 18px;
-            color: $default-color-icone;
-            padding-left: 10px;
-        }
+    &__icon {
+        font-size: 18px;
+        color: $default-color-icone;
+        padding-left: 10px;
     }
-    &-number {
+
+    &__number {
         position: absolute;
         left: -10px;
         display: flex;
@@ -152,7 +147,17 @@ h2 {
         background-color: $primary-color;
         color: $text-secondary-color;
     }
-}
+
+    &:hover {
+        background-color: $primary-color-light;
+        box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.25);
+        transition: all 350ms ease-in;
+
+        i {
+                color: $primary-color;
+        }
+    }
+}    
 
 .restaurants {
     display: flex;
@@ -213,17 +218,20 @@ h2 {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        i {
+
+        &__icon {
             font-size: 25px;
             margin-right: 20px;
         }
-    }
-    h3 {
+    
+        &__title {
         margin: 15px 0 5px 15px;
-    }
-    span {
+        }
+
+        &__text {
         margin: 0 0 0 15px;
         font-weight: 300;
+        }
     }
 }
 
@@ -252,11 +260,11 @@ h2 {
             }
         }
     }
-    &>h2 {
-        font-family: 'Shrikhand', cursive;
-        font-weight: 100;
-        font-size: 18px;
-    }
+        &__title {
+            font-family: 'Shrikhand', cursive;
+            font-weight: 100;
+            font-size: 18px;
+        }
 }
 
 /*********************/
