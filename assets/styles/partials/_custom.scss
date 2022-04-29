@@ -2,6 +2,7 @@
 
 * {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -17,15 +18,8 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
     position: relative;
-
-    &-index {
-        display: flex;
-        padding: 20px;
-        align-items: center;
-        justify-content: center;
-    }
 
     &__icon {
         position: absolute;
@@ -40,13 +34,6 @@ h2 {
 
 .research {
     background-color: $background-primary-color;
-    height: 250px;
-
-    &__title {
-        font-family: 'Roboto', sans-serif;
-        font-size: 24px;
-        font-weight: 600;
-    }
 
     &-location {
         display: flex;
@@ -58,6 +45,7 @@ h2 {
         height: 40px;
         box-shadow: inset 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
     }
+
     &-reservation {
         padding: 20px;
         display: flex;
@@ -65,10 +53,14 @@ h2 {
         justify-content: center;
         align-items: center;
         text-align: center;
+
         &__title {
             margin: 0px;
+            font-family: 'Roboto', sans-serif;
             font-size: 24px;
+            font-weight: 600;
         }
+
         &__text {
             font-weight: 300;
             color:#5a5a5a;
@@ -81,9 +73,11 @@ h2 {
     background: linear-gradient($secondary-color, $primary-color);
     box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.25);
     height: 45px;
+    min-width: 180px;
     border: 0;
     border-radius: 25px;
     padding: 15px;
+    margin: 10px 0 20px 0;
     font-weight: 500;
     cursor: pointer;
     transition: all 350ms ease-out;
@@ -220,8 +214,25 @@ h2 {
         justify-content: space-between;
 
         &__icon {
-            font-size: 25px;
-            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 5px;
+            overflow: hidden;
+
+            img {
+                width: 60px;
+                height: 60px;
+                background-color: red;
+                overflow: hidden;
+            }
+
+            i {
+                font-size: 25px;
+                margin-right: 20px;
+                color: red;
+                // text-stroke: 1px solid black;
+                }
         }
     
         &__title {
@@ -282,25 +293,50 @@ h2 {
         align-items: center;
         justify-content: flex-start;
         gap: 30px;
-        padding: 10px;
+        padding: 10px 15px 0 15px;
+
+        h1 {
+            font-size: 23px;
+        }
     }
 
     &-content {
-        padding: 15px;
+        padding: 15px 15px 0 15px;
+
         &-bloc-list {
             margin-bottom: 25px;
         }
+
+        &-bloc__title {
+            margin-bottom: 20px;
+        }
+
+        &-bloc h2 {
+            position: relative;
+            font-size: 15px;
+            font-weight: 400;
+            text-transform: uppercase;       
+        
+            &::before {
+                content: "";
+                width: 40px;
+                height: 3px;
+                position: absolute;
+                bottom: -5px;
+                background-color: $tertiary-color;
+            }
+        }    
     }
 
     &-footer {
         display: flex;
         justify-content: center;
+        padding-bottom: 20px;
     }
 }
 
 .list-elem {
     background-color: #fff;
-    width: 100%;
     box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     display: flex;
@@ -308,6 +344,59 @@ h2 {
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 15px;
+
+    &--description {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        padding: 10px;
+        max-width: calc(100% - 40px);
+
+        span {
+            display: inline-block;
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    
+    &--text {
+        justify-content: space-between;
+    }
+
+    &:hover {
+
+        .list-elem--description {
+            max-width: calc(100% - 90px);
+        }
+
+        .list-elem--price {
+            justify-self: end;
+        }
+
+        .list-elem--check {
+            display: block;
+            background-color: yellow;
+            overflow: hidden;
+            width: 50px;
+            height: 60px;
+            min-width: 50px;
+        }
+    }
+
+    h3 {
+        font-size: 16px;
+        margin: 0 0 5px 0;
+    }
+
+    span {
+        font-size: 14px;
+    }
+
+    &--check {
+        display: none;
+    }
 
 }
 
@@ -334,7 +423,7 @@ h2 {
 /*********************/
 
 .main-resto {
-    background-image: url('/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+    background-image: url('../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
     min-height: 600px;
     background-size: 100%;
     background-repeat: no-repeat;
