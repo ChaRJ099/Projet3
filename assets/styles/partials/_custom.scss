@@ -16,10 +16,18 @@ h2 {
  
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
     position: relative;
+
+    &-img {
+        padding: 15px;
+    }
+
+    &-resto {
+        padding: 15px;
+    }
 
     &__icon {
         position: absolute;
@@ -43,6 +51,7 @@ h2 {
         gap: 10px;
         background-color: $background-tertiary-color;
         height: 40px;
+        width: 100%;
         box-shadow: inset 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
     }
 
@@ -84,6 +93,7 @@ h2 {
 
     &:hover {
         box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.4);
+        filter: brightness(1.1);
         transition: all 350ms ease-in;
     }
 }
@@ -154,17 +164,26 @@ h2 {
 }    
 
 .restaurants {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 30px 20px;
     background-color: $background-primary-color;
-    gap: 20px;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
     a {
         text-decoration: none;
         color: $text-primary-color;
     }
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .card {
@@ -191,47 +210,56 @@ h2 {
         font-size: 13px;
         font-weight: 500;
     }
+
     &-body {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
         height: 70%;
         overflow: hidden;
         position: relative;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        object-fit: cover;
         img {
             object-fit: cover;
             width: 100%;
         }
     }
+
     &-footer {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
 
         &__icon {
             display: flex;
             justify-content: center;
             align-items: center;
             padding-top: 5px;
-            overflow: hidden;
-
-            img {
-                width: 60px;
-                height: 60px;
-                background-color: red;
-                overflow: hidden;
+            position: relative;
+            &-bg {
+                position: absolute;
+                font-size: 25px;
+                color: #a742c6;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-transition: background-color 3s ease-out;
+                -moz-transition: background-color 3s ease-out;
+                -o-transition: background-color 3s ease-out;
+                transition: background-color 3s ease-out;
+                z-index: 1;
             }
 
-            i {
+            &-border {
                 font-size: 25px;
-                margin-right: 20px;
-                color: red;
-                // text-stroke: 1px solid black;
-                }
+                position: absolute;
+                z-index: 2;
+            }
+            
         }
     
         &__title {
@@ -244,6 +272,56 @@ h2 {
         }
     }
 }
+
+.card-footer__icon {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+
+        // .card-footer__icon-bg {
+        //     z-index: 2;
+        // }
+
+        .card-footer__icon-border {
+            opacity: 0;
+        }
+
+        .card-footer__icon::before {
+            opacity: 1;
+        }
+
+    }
+}
+
+  
+  .card-footer__icon::before {
+    // display: initial;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
+    content: "";
+  }
+  
+  .card-footer__icon-bg:hover{
+    background: -moz-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+    background: -webkit-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+    background-image: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transition: background-color 3s ease-in;
+    -moz-transition: background-color 3s ease-in;
+    -o-transition: background-color 3s ease-in;
+    transition: background-color 3s ease-in;
+  }
+
 
 .footer {
     background-color: $background-secondary-color;
@@ -333,17 +411,40 @@ h2 {
 
 .carte-content-bloc {
 
-    .list-elem {
-        animation-name: opacity;
+    &.bloc-entrees {
 
-        &:nth-child(1) {
-            animation-duration: 2s;
+        .list-elem {
+            animation-name: opacity;
+
+            &:nth-child(1) {
+                animation-duration: 2s;
+            }
+            &:nth-child(2) {
+                animation-duration: 3s;
+            }
+            &:nth-child(3) {
+                animation-duration: 4s;
+            }
+            &:nth-child(4) {
+                animation-duration: 5s;
+            }
         }
-        &:nth-child(2) {
-            animation-duration: 3s;
-        }
-        &:nth-child(3) {
-            animation-duration: 4s;
+    }
+
+    &.bloc-plats {
+
+        .list-elem {
+            animation-name: opacity;
+
+            &:nth-child(1) {
+                animation-duration: 6s;
+            }
+            &:nth-child(2) {
+                animation-duration: 7s;
+            }
+            &:nth-child(3) {
+                animation-duration: 8s;
+            }
         }
     }
 }
@@ -506,8 +607,6 @@ h2 {
     background-position-y: -60px;
 }
 
-
-
 @keyframes opacity {
     from {
       opacity: 0;
@@ -516,4 +615,85 @@ h2 {
     to {
       opacity: 1;
     }
+}
+
+/*********************/
+/**    Desktop     **/
+/*********************/
+
+@media screen and (min-width: 960px)
+{
+    
+    .main {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .functioning {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        
+        &-bloc {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        &-list {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 30px;
+        }
+    }
+
+    .restaurants {
+        margin: auto;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        &-container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .card {
+        
+        max-width: 580px;
+    }
+    
+    .footer {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        &-nav {
+            width: 100%;
+            max-width: 1200px;
+        }
+    }
+
+    .carte {
+        max-width: 1200px;
+        margin: auto;
+        &-content {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 1rem;
+            &-bloc {
+                padding: 10px;
+            }
+        }
+    }
+
 }
