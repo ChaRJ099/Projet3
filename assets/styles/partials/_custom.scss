@@ -268,64 +268,17 @@ h2 {
         }
     
         &__title {
-        margin: 15px 0 5px 15px;
+            margin: 15px 0 5px 15px;
         }
 
         &__text {
-        margin: 0 0 0 15px;
-        font-weight: 300;
+            margin: 0 0 0 15px;
+            font-weight: 300;
         }
     }
 }
 
-.card-footer__icon {
-    position: relative;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    &:hover {
-
-        // .card-footer__icon-bg {
-        //     z-index: 2;
-        // }
-
-        .card-footer__icon-border {
-            opacity: 0;
-        }
-
-        .card-footer__icon::before {
-            opacity: 1;
-        }
-
-    }
-}
-
-  
-  .card-footer__icon::before {
-    // display: initial;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background-color: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
-    content: "";
-  }
-  
-  .card-footer__icon-bg:hover{
-    background: -moz-linear-gradient(top, #e72c83 0%, #a742c6 100%);
-    background: -webkit-linear-gradient(top, #e72c83 0%, #a742c6 100%);
-    background-image: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-transition: background-color 3s ease-in;
-    -moz-transition: background-color 3s ease-in;
-    -o-transition: background-color 3s ease-in;
-    transition: background-color 3s ease-in;
-  }
 
 
 .footer {
