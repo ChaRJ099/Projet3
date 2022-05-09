@@ -1,209 +1,249 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ohmyfood!</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/styles/styles.css">
-        <script src="https://kit.fontawesome.com/81c7537d16.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header class="header header-resto">
-            <a href="index.html"><i class="fa-solid fa-arrow-left header__icon"></i></a>            
-            <img src="assets/images/logo/ohmyfood@2x.svg" alt="Logo" class="logo">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ohmyfood!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/81c7537d16.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header header-resto">
+      <a href="index.html"
+        ><i class="fa-solid fa-arrow-left header__icon"></i
+      ></a>
+      <img src="assets/images/logo/ohmyfood@2x.svg" alt="Logo" class="logo" />
+    </header>
+    <div class="background-resto">
+      <img
+        src="./assets/images/restaurants/palette-gout.jpg"
+        class="background-resto__img"
+        alt=""
+      />
+    </div>
+    <main class="main-resto">
+      <section class="carte">
+        <header class="carte-header">
+          <h1 class="carte-header__title">La palette du goût</h1>
+          <div class="heart-icon">
+            <i class="fa-regular fa-heart heart-icon--bordered"></i>
+            <i class="fa-solid fa-heart heart-icon--gradient"></i>
+          </div>
         </header>
-        <div class="background-resto">
-            <img src="./assets/images/restaurants/palette-gout.jpg" class="background-resto__img" alt="">
-        </div>
-        <main class="main-resto">
-            <section class="carte">
-                <header class="carte-header">
-                    <h1 class="carte-header__title">La palette du goût</h1>
-                    <div class="heart-icon">
-                        <i class="fa-regular fa-heart heart-icon--bordered"></i>
-                        <i class="fa-solid fa-heart heart-icon--gradient"></i>
-                    </div>
-                </header>
-                <div class="carte-content">
-                    <div class="carte-content-bloc bloc-entrees">
-                        <h2 class="carte-content-bloc__title">Entrées</h2>
-                        <div class="carte-content-bloc-list">
-                            <div class="list-elem">
-                                <div class="list-elem-text">
-                                    <div class="list-elem-description">
-                                        <h3 class="list-elem-description__title">Fricassée d'escargot</h3>
-                                        <span class="list-elem-description__text">Au piment d'espelette</span>
-                                    </div>
-                                        <span class="list-elem__price">25€</span>
-                                </div>
-                                <div class="list-elem__check">
-                                    <div class="list-elem__check-icon">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-elem">
-                                <div class="list-elem-text">
-                                    <div class="list-elem-description">
-                                        <h3 class="list-elem-description__title">Foie gras de canard mi-cuit</h3>
-                                        <span class="list-elem-description__text">Et ses copeaux de truffe noire</span>
-                                    </div>
-                                    <div class="list-elem__price">35€</div>
-                                </div>                                
-                                <div class="list-elem__check">
-                                    <div class="list-elem__check-icon">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-elem">
-                                <div class="list-elem-text">
-                                    <div class="list-elem-description">
-                                        <h3 class="list-elem-description__title">Oeuf au plat</h3>
-                                        <span class="list-elem-description__text">Assaisonné à la truffe sur lit de caviar</span>
-                                    </div>
-                                    <div class="list-elem__price">20€</div>
-                                </div>                                
-                                <div class="list-elem__check">
-                                    <div class="list-elem__check-icon">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carte-content-bloc bloc-plats">
-                        <h2 class="carte-content-bloc__title">Plats</h2>
-                        <div class="carte-content-bloc-list">
-                            <div class="list-elem">
-                                <div class="list-elem-text">
-                                    <div class="list-elem-description">
-                                        <h3 class="list-elem-description__title">Filet de boeuf aux herbes</h3>
-                                        <span class="list-elem-description__text">Accompagné de sa ribambelle de légumes</span>
-                                    </div>
-                                    <div class="list-elem__price">40€</div>
-                                </div>                                
-                                <div class="list-elem__check">
-                                    <div class="list-elem__check-icon">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-elem">
-                                <div class="list-elem-text">
-                                    <div class="list-elem-description">
-                                        <h3 class="list-elem-description__title">Parmentier de queue de boeuf</h3>
-                                        <span class="list-elem-description__text">À la truffe noire sur sa purée de panais</span>
-                                    </div>
-                                    <div class="list-elem__price">35€</div>
-                                </div>                                
-                                <div class="list-elem__check">
-                                    <div class="list-elem__check-icon">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-elem">
-                                <div class="list-elem-text">
-                                    <div class="list-elem-description">
-                                        <h3 class="list-elem-description__title">Filet de turbot</h3>
-                                        <span class="list-elem-description__text">Aux agrumes</span>
-                                    </div>
-                                    <div class="list-elem__price">44€</div>
-                                </div>                                
-                                <div class="list-elem__check">
-                                    <div class="list-elem__check-icon">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carte-content-bloc bloc-desserts">
-                        <h2 class="carte-content-bloc__title">Desserts</h2>
-                        <div class="carte-content-bloc-list">
-                            <div class="list-elem">
-                                <div class="list-elem-text">
-                                    <div class="list-elem-description">
-                                        <h3 class="list-elem-description__title">Paris-Brest</h3>
-                                        <span class="list-elem-description__text">Revisité</span>
-                                    </div>
-                                    <div class="list-elem__price">18€</div>
-                                </div>                                
-                                <div class="list-elem__check">
-                                    <div class="list-elem__check-icon">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-elem">
-                                <div class="list-elem-text">
-                                    <div class="list-elem-description">
-                                        <h3 class="list-elem-description__title">Macaron au chocolat d'exception</h3>
-                                        <span class="list-elem-description__text">Et glace à la vanille de Madagascar</span>
-                                    </div>
-                                    <div class="list-elem__price">22€</div>
-                                </div>                                
-                                <div class="list-elem__check">
-                                    <div class="list-elem__check-icon">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-elem">
-                                <div class="list-elem-text">
-                                    <div class="list-elem-description">
-                                        <h3 class="list-elem-description__title">Mousse au chocolat</h3>
-                                        <span class="list-elem-description__text">Au piment d'Espelette et à la truffe noire</span>
-                                    </div>
-                                    <div class="list-elem__price">23€</div>
-                                </div>                                
-                                <div class="list-elem__check">
-                                    <div class="list-elem__check-icon">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="carte-content">
+          <div class="carte-content-bloc bloc-entrees">
+            <h2 class="carte-content-bloc__title">Entrées</h2>
+            <div class="carte-content-bloc-list">
+              <div class="list-elem">
+                <div class="list-elem-text">
+                  <div class="list-elem-description">
+                    <h3 class="list-elem-description__title">
+                      Fricassée d'escargot
+                    </h3>
+                    <span class="list-elem-description__text"
+                      >Au piment d'espelette</span
+                    >
+                  </div>
+                  <span class="list-elem__price">25€</span>
                 </div>
-                <footer class="carte-footer">
-                    <button class="button" type="submit">Commander</button>
-                </footer>
-            </section>
-        </main>    
-
-        <footer class="footer">
-            <nav class="footer-nav">
-                <h2 class="footer__title">ohmyfood</h2>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa-solid fa-utensils"></i>
-                            <span>Proposer un restaurant</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-solid fa-handshake-angle"></i>
-                            <span>Devenir partenaire</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>Mentions légales</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:test@test.fr">
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+                <div class="list-elem__check">
+                  <div class="list-elem__check-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="list-elem">
+                <div class="list-elem-text">
+                  <div class="list-elem-description">
+                    <h3 class="list-elem-description__title">
+                      Foie gras de canard mi-cuit
+                    </h3>
+                    <span class="list-elem-description__text"
+                      >Et ses copeaux de truffe noire</span
+                    >
+                  </div>
+                  <div class="list-elem__price">35€</div>
+                </div>
+                <div class="list-elem__check">
+                  <div class="list-elem__check-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="list-elem">
+                <div class="list-elem-text">
+                  <div class="list-elem-description">
+                    <h3 class="list-elem-description__title">Oeuf au plat</h3>
+                    <span class="list-elem-description__text"
+                      >Assaisonné à la truffe sur lit de caviar</span
+                    >
+                  </div>
+                  <div class="list-elem__price">20€</div>
+                </div>
+                <div class="list-elem__check">
+                  <div class="list-elem__check-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carte-content-bloc bloc-plats">
+            <h2 class="carte-content-bloc__title">Plats</h2>
+            <div class="carte-content-bloc-list">
+              <div class="list-elem">
+                <div class="list-elem-text">
+                  <div class="list-elem-description">
+                    <h3 class="list-elem-description__title">
+                      Filet de boeuf aux herbes
+                    </h3>
+                    <span class="list-elem-description__text"
+                      >Accompagné de sa ribambelle de légumes</span
+                    >
+                  </div>
+                  <div class="list-elem__price">40€</div>
+                </div>
+                <div class="list-elem__check">
+                  <div class="list-elem__check-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="list-elem">
+                <div class="list-elem-text">
+                  <div class="list-elem-description">
+                    <h3 class="list-elem-description__title">
+                      Parmentier de queue de boeuf
+                    </h3>
+                    <span class="list-elem-description__text"
+                      >À la truffe noire sur sa purée de panais</span
+                    >
+                  </div>
+                  <div class="list-elem__price">35€</div>
+                </div>
+                <div class="list-elem__check">
+                  <div class="list-elem__check-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="list-elem">
+                <div class="list-elem-text">
+                  <div class="list-elem-description">
+                    <h3 class="list-elem-description__title">
+                      Filet de turbot
+                    </h3>
+                    <span class="list-elem-description__text">Aux agrumes</span>
+                  </div>
+                  <div class="list-elem__price">44€</div>
+                </div>
+                <div class="list-elem__check">
+                  <div class="list-elem__check-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carte-content-bloc bloc-desserts">
+            <h2 class="carte-content-bloc__title">Desserts</h2>
+            <div class="carte-content-bloc-list">
+              <div class="list-elem">
+                <div class="list-elem-text">
+                  <div class="list-elem-description">
+                    <h3 class="list-elem-description__title">Paris-Brest</h3>
+                    <span class="list-elem-description__text">Revisité</span>
+                  </div>
+                  <div class="list-elem__price">18€</div>
+                </div>
+                <div class="list-elem__check">
+                  <div class="list-elem__check-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="list-elem">
+                <div class="list-elem-text">
+                  <div class="list-elem-description">
+                    <h3 class="list-elem-description__title">
+                      Macaron au chocolat d'exception
+                    </h3>
+                    <span class="list-elem-description__text"
+                      >Et glace à la vanille de Madagascar</span
+                    >
+                  </div>
+                  <div class="list-elem__price">22€</div>
+                </div>
+                <div class="list-elem__check">
+                  <div class="list-elem__check-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="list-elem">
+                <div class="list-elem-text">
+                  <div class="list-elem-description">
+                    <h3 class="list-elem-description__title">
+                      Mousse au chocolat
+                    </h3>
+                    <span class="list-elem-description__text"
+                      >Au piment d'Espelette et à la truffe noire</span
+                    >
+                  </div>
+                  <div class="list-elem__price">23€</div>
+                </div>
+                <div class="list-elem__check">
+                  <div class="list-elem__check-icon">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="carte-footer">
+          <button class="button" type="submit">Commander</button>
         </footer>
-    </body>
-</html>    
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer-nav">
+        <h2 class="footer__title">ohmyfood</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-utensils"></i>
+              <span>Proposer un restaurant</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-handshake-angle"></i>
+              <span>Devenir partenaire</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Mentions légales</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:test@test.fr">
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
